@@ -1,0 +1,12 @@
+
+services:
+  nginx-proxy:
+    image: nginx
+    container_name: nginx-proxy
+    volumes:
+      - /Users/aneben/repos/new_tab/nginx-config:/etc/nginx/conf.d
+      - /Users/aneben/repos/new_tab/html:/usr/share/nginx/html
+    ports:
+      - "80:80"
+    restart: unless-stopped
+
